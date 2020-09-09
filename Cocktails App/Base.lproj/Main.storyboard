@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cocktails View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CocktailsViewController" customModule="Cocktails_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N9U-Wg-cLi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CocktailCell" id="sG3-Y0-nGX" customClass="CocktailCell" customModule="Cocktails_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sG3-Y0-nGX" id="b3H-Dd-8M7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jDA-oe-sMI">
+                                                    <rect key="frame" x="20" y="11" width="128" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="jDA-oe-sMI" secondAttribute="height" multiplier="1:1" id="z8q-OK-xuc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-wz-RmC">
+                                                    <rect key="frame" x="156" y="65" width="238" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Tx8-wz-RmC" secondAttribute="height" multiplier="34:3" id="IZr-S1-Y9R"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jDA-oe-sMI" firstAttribute="leading" secondItem="b3H-Dd-8M7" secondAttribute="leading" constant="20" id="0VQ-Zc-idt"/>
+                                                <constraint firstAttribute="trailing" secondItem="Tx8-wz-RmC" secondAttribute="trailing" constant="20" id="CJ0-Tf-9bY"/>
+                                                <constraint firstAttribute="bottom" secondItem="jDA-oe-sMI" secondAttribute="bottom" constant="11" id="Exm-eo-UUf"/>
+                                                <constraint firstAttribute="bottom" secondItem="Tx8-wz-RmC" secondAttribute="bottom" constant="64" id="H6B-Zq-RhW"/>
+                                                <constraint firstItem="Tx8-wz-RmC" firstAttribute="leading" secondItem="jDA-oe-sMI" secondAttribute="trailing" constant="8" id="jwr-1B-wun"/>
+                                                <constraint firstItem="jDA-oe-sMI" firstAttribute="top" secondItem="b3H-Dd-8M7" secondAttribute="top" constant="11" id="qfg-OY-cIq"/>
+                                                <constraint firstItem="Tx8-wz-RmC" firstAttribute="top" secondItem="b3H-Dd-8M7" secondAttribute="top" constant="65" id="zY9-dC-f8Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cocktailImage" destination="jDA-oe-sMI" id="HfY-xt-PfN"/>
+                                            <outlet property="cocktailNameLabel" destination="Tx8-wz-RmC" id="JOF-qQ-cIF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="N9U-Wg-cLi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dTn-UJ-ioC"/>
+                            <constraint firstItem="N9U-Wg-cLi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eyu-nP-UxJ"/>
+                            <constraint firstAttribute="bottom" secondItem="N9U-Wg-cLi" secondAttribute="bottom" id="iSr-Xo-loT"/>
+                            <constraint firstItem="N9U-Wg-cLi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zQg-bq-dZk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="N9U-Wg-cLi" id="X4i-Hs-N46"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="124.55357142857142"/>
+        </scene>
+    </scenes>
+</document>
