@@ -9,7 +9,9 @@
 import Foundation
 
 struct Drinks {
-    let drinks = [CocktailData]()
+    
+    //var drinkName = String()
+    var drinks = [CocktailData]()
 }
 
 struct CocktailData {

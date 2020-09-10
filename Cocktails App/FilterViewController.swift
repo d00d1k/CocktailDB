@@ -87,15 +87,12 @@ extension FilterViewController {
         let request = AF.request("https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list")
         
         request.responseJSON { (json) in
-            //print(json)
             if let data = json.data {
                 if let json = try? JSON(data: data) {
                     for item in json["drinks"].arrayValue {
                         
                         self.categories.append(item["strCategory"].stringValue)
-//
-//                        print("drinks.count2 \(self.drinks.count)")
-
+                        
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
                         }
